@@ -44,8 +44,8 @@
         if (enemy.health <= 0) {
           continue;
         }
-        // Keep the enemy with greater health.
-        if (target && target.health > enemy.health) {
+        // Keep the enemy with greater health or keep the original target if they have equal health.
+        if (target && target.health >= enemy.health) {
           continue;
         }
 
