@@ -22,17 +22,17 @@
       { 
         label: "Row",
         tiles: [
-        {x: 55, y: 80, colors: "#e6a23c"},
-        {x: 175, y: 80, colors: "#6555aa"},
-        {x: 295, y: 80, colors: "#248a87"},
+        {x: 55, y: 80, color: "#e6a23c"},
+        {x: 175, y: 80, color: "#6555aa"},
+        {x: 295, y: 80, color: "#248a87"},
         ],
       },
       { 
         label: "Stack",
         tiles: [
-          {x: 135, y: 55, colors: "#248a87"},
-          {x: 175, y: 80, colors: "#e6a23c"},
-          {x: 215, y: 105, colors: "#6555aa"},
+          {x: 135, y: 55, color: "#248a87"},
+          {x: 175, y: 80, color: "#e6a23c"},
+          {x: 215, y: 105, color: "#6555aa"},
         ],
       },
     ]
@@ -49,8 +49,8 @@
       const layout = layouts[layoutIndex];
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       document.querySelector("#arrangement").textContent = `Arrangement: ${layout.label}`;
-      layout.tiles.forEach(({x, y, colors}) => {
-        paintTile(x, y, colors);
+      layout.tiles.forEach(({x, y, color}) => {
+        paintTile(x, y, color);
       });
       // If options.experimentalShadows, try drawing a fancy second pass later.
       // ctx.shadowBlur = 12;
